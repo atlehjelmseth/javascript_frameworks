@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.navElements {
+  display: flex;
+  align-items: center;
+}
+
+.links a:hover {
+  color: #0070f3;
+}
