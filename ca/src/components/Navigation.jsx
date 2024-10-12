@@ -1,17 +1,26 @@
 import NavStyles from '../styles/Navbar.module.css'
+import { Link } from 'react-router-dom';
 import { CiShoppingCart } from "react-icons/ci";
+import { useShoppingCart } from './ShoppingCart';
 
 
 function Navbar() {
+  const { cart } = useShoppingCart();
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
   return ( 
-    <nav >
-      <div className={NavStyles.navElements}>
-        <div className={NavStyles.links}>
-          <a href="/">Home</a>
-          <a href="/contact">Contact Us</a>
-        </div>
-        <CiShoppingCart size={40} style={{ marginLeft: '20px' }}/>
-      </div>
+    <nav>
+      <ul className={NavStyles.links}>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact us</Link>
+        </li>
+        <li>
+          <Link to="/cart"><CiShoppingCart className={NavStyles.cartIcon}/> <span >{totalItems}</span></Link>
+        </li>
+      </ul>
     </nav>
    );
 }

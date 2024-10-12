@@ -14,20 +14,31 @@ h1 {
 
 .links {
   display: flex;
-  gap: 20px;
+  gap: 50px;
+  position: relative;
+  list-style-type: none;
+  right: 20px;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-size: 18px;
 }
 
-.navElements {
-  display: flex;
-  align-items: center;
+.cartIcon {
+  font-size: 2.5em;
+  position: absolute;
+  top: -12px;
+  right: -25px;
 }
 
+
 .links a:hover {
-  color: #0070f3;
+  color: blue;
+}
+
+span {
+  position: absolute;
+  font-size: 16px;
 }

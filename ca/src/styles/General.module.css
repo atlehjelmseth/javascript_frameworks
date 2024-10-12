@@ -4,6 +4,14 @@
   font-family: "Afacad Flux", sans-serif;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
 .mainContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -35,6 +43,34 @@
   margin-top: 200px;
 }
 
+input {
+ display: block;
+ margin: 15px auto 0 auto;
+ width: 200px;
+}
+
+.suggestion {
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  max-height: 200px;
+  max-width: 1000px;
+  overflow-y: auto;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.suggestionItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestionItem:hover {
+  background-color: #f0f0f0;
+}
 
 
 @media (max-width: 600px) {
