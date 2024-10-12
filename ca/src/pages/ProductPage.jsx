@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Styles from '../styles/General.module.css';
 import Cards from '../styles/Cards.module.css';
 import ButtonStyle from '../styles/Button.module.css';
+import ProductStyle from '../styles/Product.module.css';
 
 const url = 'https://v2.api.noroff.dev/online-shop';
 
@@ -73,13 +74,13 @@ function Product() {
         </div>
       </div>
       {product.data.reviews && product.data.reviews.length > 0 && (
-        <div className={Cards.review}>
+        <div className={ProductStyle.review}>
           <h3>Reviews:</h3>
           <div className={Styles.review}>
             {product.data.reviews.map((review) => (
               <li key={review.id}>
                 <strong>{review.username}:</strong> {review.description}
-                <p>Rating: {review.rating}</p>
+                <p className={ProductStyle.rating}>Rating: {review.rating}</p>
               </li>
             ))}
           </div>

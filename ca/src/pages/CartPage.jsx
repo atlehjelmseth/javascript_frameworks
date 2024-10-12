@@ -25,7 +25,7 @@ function CartPage() {
              </div>
              <div>
              <p>Price: {item.discountedPrice.toFixed(2)}</p>
-             <p>Quantity: {item.quantity}</p>
+             <p>Amount: {item.quantity}</p>
              <p>Total: {(item.discountedPrice * item.quantity).toFixed(2)}</p>
              </div>
              <div>
@@ -37,9 +37,9 @@ function CartPage() {
       )}
           {cart.length > 0 && (
             <div className={CartPageStyle.amountAndCheckout}>
-              <h3>Total Amount: {totalAmount.toFixed(2)}</h3>
+              <div className={CartPageStyle.totalAmount}>Total Amount: {totalAmount.toFixed(2)}</div>
               <Link to={`/cartsuccess`}>
-              <button className={ButtonStyle.primary} onClick={clearCart}>Checkout</button></Link>
+              <button className={ButtonStyle.callToAction} onClick={clearCart}>Checkout</button></Link>
             </div>
           )}
     </div>

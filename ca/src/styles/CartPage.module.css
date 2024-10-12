@@ -4,3 +4,9 @@
   margin-bottom: 50px;
   text-align: center;
 }
+
+.totalAmount {
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
