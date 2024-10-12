@@ -1,7 +1,7 @@
 import Home from './pages/HomePage';
 import Contact from './pages/ContactPage';
 import Layout from './components/Layout'
-import Product from './pages/ProductPage'
+import Product from './pages/Productpage'
 import CartPage from './pages/CartPage'
 import CartSuccess from './pages/CheckoutSuccessPage'
 import { Routes, Route } from "react-router-dom"

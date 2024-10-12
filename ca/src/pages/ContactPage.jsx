@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Styles from '../styles/Contact.module.css';
+import ButtonStyle from '../styles/Button.module.css';
 
 function App() {
   const [fullName, setFullName] = useState('');
@@ -48,6 +49,7 @@ function App() {
       };
 
       console.log('Form data:', info);
+      alert("Your message is sendt!");
 
       setFullName('');
       setSubject('');
@@ -119,8 +121,9 @@ function App() {
           
         />
         {errors.body && <p className={Styles.error}>{errors.body}</p>}
-
-        <button type="submit">Submit</button>
+        <div className={ButtonStyle.buttonsDiv}>
+        <button className={ButtonStyle.callToAction} type="submit">Submit</button>
+        </div>
       </form>
     </div>
   );

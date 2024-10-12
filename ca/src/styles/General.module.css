@@ -43,13 +43,13 @@ p {
   margin-top: 200px;
 }
 
-input {
+.searchbar {
  display: block;
  margin: 15px auto 0 auto;
- width: 200px;
+ max-width: 300px!important;
 }
 
-.suggestion {
+.result {
   padding: 0;
   margin: 0 auto;
   border: 1px solid #ccc;
@@ -63,12 +63,12 @@ input {
   transform: translateX(-50%);
 }
 
-.suggestionItem {
+.resultItem {
   padding: 10px;
   cursor: pointer;
 }
 
-.suggestionItem:hover {
+.resultItem:hover {
   background-color: #f0f0f0;
 }
 

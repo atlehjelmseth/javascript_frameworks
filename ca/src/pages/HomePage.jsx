@@ -11,7 +11,7 @@ function Home() {
   const [error, setError] = useState(false);
   const [product, setProduct] = useState([]);
   const [search, setSearch] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
 
   const navigate = useNavigate();
 
@@ -34,18 +34,18 @@ function Home() {
 
   useEffect(() => {
     if (search.trim() !== '') {
-      const filteredSuggestions = product.data
+      const filteredSearchResult = product.data
         ? product.data.filter((p) =>
             p.title.toLowerCase().includes(search.toLowerCase())
           )
         : [];
-      setSuggestions(filteredSuggestions);
+      setSearchResult(filteredSearchResult);
     } else {
-      setSuggestions([]);
+      setSearchResult([]);
     }
   }, [search, product]);
 
-  const handleSuggestionClick = (id) => {
+  const searchResultClickButton = (id) => {
     navigate(`/product/${id}`); 
   };
 
@@ -64,16 +64,16 @@ function Home() {
         placeholder="Search for product"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className={Styles.searchBar}
+        className={Styles.searchbar}
       />
 
-      {suggestions.length > 0 && (
-        <ul className={Styles.suggestion}>
-          {suggestions.map((item) => (
+      {searchResult.length > 0 && (
+        <ul className={Styles.result}>
+          {searchResult.map((item) => (
             <li
               key={item.id}
-              className={Styles.suggestionItem}
-              onClick={() => handleSuggestionClick(item.id)}
+              className={Styles.resultItem}
+              onClick={() => searchResultClickButton(item.id)}
             >
               {item.title}
             </li>
