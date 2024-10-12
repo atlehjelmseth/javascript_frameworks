@@ -1,0 +1,32 @@
+button {
+  padding: 10px;
+  width: 150px;
+  background-color: rgb(25, 61, 29);
+  color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .5s ease;
+  border: 3px solid rgb(25, 61, 29);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  outline: none;
+}
+
+button:hover {
+  background-color: white;
+  color:  rgb(25, 61, 29);
+}
+
+.callToAction {
+  background-color: lightgreen;
+  color: black;
+}
+
+.buttonsDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
