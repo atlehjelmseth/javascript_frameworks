@@ -43,7 +43,8 @@ a {
 }
 
 .links a:hover {
-color: green;
+  text-decoration: underline;
+  color: green;
 }
 
 span {
