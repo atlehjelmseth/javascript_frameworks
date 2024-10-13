@@ -38,9 +38,12 @@ a {
   right: -25px;
 }
 
+.cartLink:hover {
+  color: green;
+}
 
 .links a:hover {
-  text-decoration: underline;
+color: green;
 }
 
 span {
@@ -54,7 +57,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.94);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -90,7 +93,6 @@ text-align: center;
 .closeButton {
   position: absolute;
   top: 20px;
-  right: 30px;
   background-color: transparent;
   border: none;
   font-size: 32px;

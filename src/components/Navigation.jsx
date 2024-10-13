@@ -8,10 +8,10 @@ function Navbar() {
   const { cart } = useShoppingCart();
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [checkMenuOpen, setCheckMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const changeMenu = () => {
+    setCheckMenuOpen(!checkMenuOpen);
   };
 
   return (
@@ -25,25 +25,25 @@ function Navbar() {
             <Link to="/contact">Contact us</Link>
           </li>
           <li className={NavStyles.mobile}>
-            <Link href="#" onClick={toggleMenu}>Menu</Link>
+            <Link href="#" onClick={changeMenu}>Menu</Link>
           </li>
           <li>
-            <Link to="/cart">
+            <Link className={NavStyles.cartLink} to="/cart">
               <CiShoppingCart className={NavStyles.cartIcon} /> <span>{totalItems}</span>
             </Link>
           </li>
         </ul>
       </nav>
 
-      {isMenuOpen && (
+      {checkMenuOpen && (
         <div className={NavStyles.fullscreenMenu}>
-          <button className={NavStyles.closeButton} onClick={toggleMenu}>Close</button>
+          <button className={NavStyles.closeButton} onClick={changeMenu}>Close</button>
           <ul className={NavStyles.fullscreenLinks}>
             <li >
-              <Link to="/" onClick={toggleMenu}>Home</Link>
+              <Link to="/" onClick={changeMenu}>Home</Link>
             </li>
             <li>
-              <Link to="/contact" onClick={toggleMenu}>Contact us</Link>
+              <Link to="/contact" onClick={changeMenu}>Contact us</Link>
             </li>
           </ul>
         </div>

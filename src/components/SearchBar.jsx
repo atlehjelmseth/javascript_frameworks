@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const SearchBar = ({ posts, setFilteredPosts }) => {
   const [query, setQuery] = useState('');
 
-  const handleInputChange = (event) => {
+  const handle = (event) => {
     const input = event.target.value;
     setQuery(input);
 
@@ -23,7 +23,7 @@ const SearchBar = ({ posts, setFilteredPosts }) => {
         type="text"
         placeholder="Search posts"
         value={query}
-        onChange={handleInputChange}
+        onChange={handle}
       />
     </div>
   );

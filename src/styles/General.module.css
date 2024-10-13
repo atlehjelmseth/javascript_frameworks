@@ -2,7 +2,10 @@
 
 * {
   font-family: "Afacad Flux", sans-serif;
+}
 
+html {
+  overflow-y: scroll;
 }
 
 h1, h2 {
@@ -36,6 +39,7 @@ p {
   color: green;
   font-size: 2em;
   margin-top: 200px;
+  margin-bottom: 150px;
 }
 
 .error {
