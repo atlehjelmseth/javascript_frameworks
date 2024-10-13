@@ -40,15 +40,7 @@ a {
 
 .cartLink:hover {
   color: green;
-  span {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-}
 
-
-.cartLink:hover {
-  font-weight: bold;
 }
 
 
