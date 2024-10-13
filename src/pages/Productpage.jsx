@@ -60,8 +60,8 @@ function Product() {
       <div>
         {product.data.price !== product.data.discountedPrice ? (
           <div>
-            <p>Discount: {(product.data.price - product.data.discountedPrice).toFixed(2)},-</p>
-            <p>Price: {product.data.discountedPrice.toFixed(2)},-</p>
+            <p className={Cards.before}>Discount: {(product.data.price - product.data.discountedPrice).toFixed(2)},-</p>
+            <p className={Cards.now}>Price: {product.data.discountedPrice.toFixed(2)},-</p>
           </div>
         ) : (
           <p>Price: {product.data.price.toFixed(2)},-</p>
