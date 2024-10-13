@@ -68,15 +68,19 @@ p {
   overflow-y: auto;
   left: 50%; 
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .resultItem {
   padding: 10px;
   cursor: pointer;
+  z-index: 10!important;
+  position: relative;
 }
 
 .resultItem:hover {
   background-color: #f8f8f8;
+  z-index: 10!important;
 }
 
 
