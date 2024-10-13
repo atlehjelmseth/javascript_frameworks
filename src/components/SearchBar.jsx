@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ posts, setFilteredPosts }) => {
+const SearchBar = ({ posts, setSearchedPosts }) => {
   const [query, setQuery] = useState('');
 
-  const handle = (event) => {
+  const searchProducts = (event) => {
     const input = event.target.value;
     setQuery(input);
 
@@ -11,9 +11,9 @@ const SearchBar = ({ posts, setFilteredPosts }) => {
       const filtered = posts.filter(post =>
         post.title.toLowerCase().includes(input.toLowerCase())
       );
-      setFilteredPosts(filtered);
+      setSearchedPosts(filtered);
     } else {
-      setFilteredPosts(posts);
+      setSearchedPosts(posts);
     }
   };
 
@@ -23,7 +23,7 @@ const SearchBar = ({ posts, setFilteredPosts }) => {
         type="text"
         placeholder="Search posts"
         value={query}
-        onChange={handle}
+        onChange={searchProducts}
       />
     </div>
   );
