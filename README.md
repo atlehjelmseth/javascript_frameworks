@@ -1,6 +1,6 @@
 # eCom Store - JavaScript Frameworks CA
 
-![image](https://github.com/atlehjelmseth/semester_project_2/blob/main/bidoneverything_git.png)
+![image](https://github.com/atlehjelmseth/javascript_frameworks/blob/main/ecomstore_git.png)
 
 
 ## Description
